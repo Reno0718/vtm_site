@@ -1,3 +1,22 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
+
+body {
+  background-color: bisque;
+}
+
+a:link {
+  color: chocolate;
+}
+
+a:visited {
+  color: purple;
+}
+
 label {
   float: left;
   text-align: right;

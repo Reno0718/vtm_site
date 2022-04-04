@@ -12,6 +12,7 @@
   <input type="number" id="Height" name="Height" />
   <br /><br />
   <input type="submit" id="submit" value="Submit" />
+  <input type="reset" value="Clear" />
 </form>
 
-{% endblock %}
+{% if estimate %} The estimate is about ${{estimate}} {% endif %} {% endblock %}
