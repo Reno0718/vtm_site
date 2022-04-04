@@ -1,5 +1,17 @@
 {% extends 'base.html' %} {% block body %}
 
-<h2>Hello Estimate!!!</h2>
+<h1>Verticle Tank Maintainance</h1>
+<hr />
+<h3>VTM Estimater</h3>
+
+<form action="/estimate" method="POST">
+  <label for="Radius">Radius:</label>
+  <input type="number" id="Radius" name="Radius" />
+  <br /><br />
+  <label for="Height">Height:</label>
+  <input type="number" id="Height" name="Height" />
+  <br /><br />
+  <input type="submit" id="submit" value="Submit" />
+</form>
 
 {% endblock %}
