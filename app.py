@@ -11,6 +11,21 @@ def index():
 def about():
     return render_template('about.html', pageTitle='Verticle Tank Maintainance')
 
+def area_tank(height, radius):
+    pi = 3.14
+    tank_top = pi * radius**2
+    area_side = 2 * (pi * (radius * height))
+    total_area = tank_top + area_side
+    square_feet = total_area/144
+    return square_feet
+
+def price_tank(square_feet):
+    material = square_feet * 25
+    labor = square_feet * 15
+    quote = labor + material
+    return quote
+
+
 @app.route('/estimate', methods = ['GET','POST'])
 def estimate():
     if request.method == 'POST':
